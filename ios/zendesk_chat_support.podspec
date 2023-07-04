@@ -1,6 +1,6 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint zendesk_chat_support.podspec` to validate before publishing.
+# Run 'pod lib lint zendesk_chat_support.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
   s.name             = 'zendesk_chat_support'
@@ -15,6 +15,7 @@ A new Flutter project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
+  s.dependency 'ZendeskChatSDK', '4.0.0'
   s.platform = :ios, '9.0'
 
   # Flutter.framework does not contain a i386 slice.
