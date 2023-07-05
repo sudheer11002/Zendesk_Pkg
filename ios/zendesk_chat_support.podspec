@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'zendesk_chat_support'
-  s.version          = '0.0.1'
+  s.version          = '0.0.3'
   s.summary          = 'Zendesk chat support.'
   s.description      = <<-DESC
   Zendesk chat support.
