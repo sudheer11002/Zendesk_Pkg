@@ -18,6 +18,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
+  String androidChannelKey = 'YOUR_ANDROID_CHANNEL_KEY';
+  String iosChannelKey = 'IOS_CHANNEL_KEY';
+  String zenDeskUrl = 'https://YOUR_DOMAIN_NAME.zendesk.com';
+  String appId = 'YOUR_APP_ID';
+  String oAuthId = 'YOUR_O_AUTH_ID';
   final _zendeskChatSupportPlugin = ZendeskChatSupport();
 
   @override
@@ -31,16 +36,17 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
+
     try {
-      platformVersion = await _zendeskChatSupportPlugin.getPlatformVersion() ??
-          'Unknown platform version';
+      platformVersion = await _zendeskChatSupportPlugin.getPlatformVersion() ?? 'Unknown platform version';
 
       _zendeskChatSupportPlugin.initialize(
-          androidChannelKey: "5dVenha72NIlrwWZLrxUZxPboNSMRT33",
-          iosChannelKey: "5dVenha72NIlrwWZLrxUZxPboNSMRT33",
-          zenDeskUrl: "https://jacanawarranty.zendesk.com",
-          appId: "af8d0208d1a4b5a0690848f5f469c01db8d86608d16a5193",
-          oAuthId: "mobile_sdk_client_d051a1cf71d50f49d7b4");
+        androidChannelKey: androidChannelKey,
+        iosChannelKey: iosChannelKey,
+        zenDeskUrl: zenDeskUrl,
+        appId: appId,
+        oAuthId: oAuthId,
+      );
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
@@ -76,16 +82,16 @@ class _MyAppState extends State<MyApp> {
                       _zendeskChatSupportPlugin.show();
                     } else {
                       _zendeskChatSupportPlugin.initialize(
-                          androidChannelKey: "5dVenha72NIlrwWZLrxUZxPboNSMRT33",
-                          iosChannelKey: "5dVenha72NIlrwWZLrxUZxPboNSMRT33",
-                          zenDeskUrl: "https://jacanawarranty.zendesk.com",
-                          appId:
-                              "af8d0208d1a4b5a0690848f5f469c01db8d86608d16a5193",
-                          oAuthId: "mobile_sdk_client_d051a1cf71d50f49d7b4");
+                        androidChannelKey: androidChannelKey,
+                        iosChannelKey: iosChannelKey,
+                        zenDeskUrl: zenDeskUrl,
+                        appId: appId,
+                        oAuthId: oAuthId,
+                      );
                     }
                   });
                 },
-                child: Text("Start Chat"))
+                child: const Text("Start Chat"))
           ],
         ),
       ),

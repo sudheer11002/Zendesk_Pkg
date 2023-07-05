@@ -1,10 +1,10 @@
 name: zendesk_chat_support
-description: A new Flutter project.
+description: Zendesk chat support.
 version: 0.0.1
-homepage:
+homepage: https://github.com/sudheer11002/Zendesk_Pkg
 
 environment:
-  sdk: '>=2.18.6 <3.0.0'
+  sdk: '>=2.18.6 <4.0.0'
   flutter: ">=2.5.0"
 
 dependencies:
