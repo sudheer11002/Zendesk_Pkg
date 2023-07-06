@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
                   await _zendeskChatSupportPlugin.isInitialize().then((value) {
                     log("isInitialize: ${value}");
                     if (value) {
-                      _zendeskChatSupportPlugin.show();
+                      _zendeskChatSupportPlugin.show(titleName: "Chat",);
                     } else {
                       _zendeskChatSupportPlugin.initialize(
                           androidChannelKey: "5dVenha72NIlrwWZLrxUZxPboNSMRT33",

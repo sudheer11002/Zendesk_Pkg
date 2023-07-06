@@ -42,9 +42,10 @@ class ZendeskChat(private  val zendeskChatSupportPlugin: ZendeskChatSupportPlugi
     }
 
 
-    fun show() {
+    fun show(titleName: String) {
         println("$tag - zendeskChatSupportPluginActivity - ${zendeskChatSupportPlugin.activity!!}")
         MessagingActivity.builder()
+            .withToolbarTitle(titleName)
             .withEngines(ChatEngine.engine())
             .show(zendeskChatSupportPlugin.activity!!)
     }

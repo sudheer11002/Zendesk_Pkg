@@ -48,7 +48,9 @@ public class SwiftZendeskChatSupportPlugin: NSObject, FlutterPlugin {
                 if (!isInitialized) {
                     print("\(TAG) - Messaging needs to be initialized first.\n")
                 }
-                zendeskMessaging.show(rootViewController: UIApplication.shared.delegate?.window??.rootViewController)
+                 let titleName: String = (arguments?["titleName"] ?? "") as! String
+                zendeskMessaging.show(rootViewController: UIApplication.shared.delegate?.window??.rootViewController,
+                titleName: titleName)
                 break
 
             case "isInitialized":
