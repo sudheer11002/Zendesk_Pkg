@@ -4,10 +4,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'zendesk_chat_support'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter project.'
+  s.version          = '0.0.3'
+  s.summary          = 'Zendesk chat support.'
   s.description      = <<-DESC
-A new Flutter project.
+  Zendesk chat support.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
