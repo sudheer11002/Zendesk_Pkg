@@ -51,8 +51,8 @@ After that, the style is add the Manifest.xml(android -> app -> src -> main -> A
          </intent-filter>
      </activity>
  </application>
-
-
+```
+<hr style="border:1px  grey">
 
 
 
