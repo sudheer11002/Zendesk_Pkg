@@ -32,7 +32,7 @@ After that, the style is add the Manifest.xml(android -> app -> src -> main -> A
     android:allowBackup ="true"
     android:theme="@style/LaunchTheme"   // add this line 
     android:networkSecurityConfig="@xml/network_security_config"
-     android:icon="@mipmap/ic_launcher">
+    android:icon="@mipmap/ic_launcher">
      <activity
          android:name=".MainActivity"
          android:exported="true"
@@ -41,13 +41,13 @@ After that, the style is add the Manifest.xml(android -> app -> src -> main -> A
          android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
          android:hardwareAccelerated="true"
          android:windowSoftInputMode="adjustResize">
-                  <meta-data
+          <meta-data
            android:name="io.flutter.embedding.android.NormalTheme"
            android:resource="@style/NormalTheme"
            />
          <intent-filter>
              <action android:name="android.intent.action.MAIN"/>
-             <category android:name="android.intent.category.LAUNCHER"/>
+             <category android:name="androdid.intent.category.LAUNCHER"/>
          </intent-filter>
      </activity>
  </application>
