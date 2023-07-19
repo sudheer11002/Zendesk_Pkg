@@ -1,6 +1,6 @@
 name: zendesk_chat_support
 description: Zendesk chat support.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/sudheer11002/Zendesk_Pkg
 
 environment:
