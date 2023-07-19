@@ -53,7 +53,9 @@ class ZendeskChatSupportPlugin: FlutterPlugin, MethodCallHandler, ActivityAware 
           println("$tag - Messaging needs to be initialized first")
           return
         }
-        zendeskChat.show()
+
+        val name = call.argument<String>("titleName")!!
+        zendeskChat.show(name)
       }
       "isInitialized" -> {
         result.success(isInitialized)

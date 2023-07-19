@@ -23,11 +23,15 @@ public class ZendeskSupportChat: NSObject {
          Chat.initialize(accountKey: accountKey)
     }
 
-    func show(rootViewController: UIViewController?) {
+    func show(rootViewController: UIViewController?, titleName: String) {
 
             do{
              let chatEngine = try  ChatEngine.engine()
-             let messagingViewController =  try Messaging.instance.buildUI(engines: [chatEngine], configs: [])
+
+             let messagingConfiguration = MessagingConfiguration()
+             messagingConfiguration.name = titleName
+             let messagingViewController =  try Messaging.instance.buildUI(engines: [chatEngine],
+             configs: [messagingConfiguration])
             guard let viewController = rootViewController else { return }
               viewController.present(messagingViewController, animated: true, completion: nil)
              print("\(self.TAG) - show")

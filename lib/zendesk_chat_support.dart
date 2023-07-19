@@ -43,6 +43,8 @@ class ZendeskChatSupport {
 
   Future<bool> isInitialize() async {
     try {
+
+
       return await _channel.invokeMethod(
         'isInitialized',
       );
@@ -52,9 +54,13 @@ class ZendeskChatSupport {
     }
   }
 
-  Future<void> show() async {
+  Future<void> show({required String titleName,}) async {
     try {
-      await _channel.invokeMethod('show');
+      await _channel.invokeMethod('show', {
+        'titleName':
+        titleName,
+      });
+      return;
     } catch (e) {
       debugPrint('ZendeskMessaging - show - Error: $e}');
     }
