@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - zendesk_chat_support (0.0.5):
+  - zendesk_chat_support (0.0.6):
     - Flutter
     - ZendeskChatSDK (= 4.0.0)
   - ZendeskChatProvidersSDK (4.0.0)
